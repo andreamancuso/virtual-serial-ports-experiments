@@ -1,0 +1,21 @@
+{
+  "name": "virtual-serial-port-experiments",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsx index.ts"
+  },
+  "author": "andreamancuso",
+  "license": "MIT",
+  "dependencies": {
+    "@serialport/stream": "^13.0.0",
+    "serialport": "^13.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.0",
+    "@types/serialport": "^10.2.0",
+    "prettier": "^3.4.2",
+    "tsx": "^4.19.2"
+  }
+}
