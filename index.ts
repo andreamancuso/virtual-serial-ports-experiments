@@ -1,7 +1,7 @@
 import readline from "node:readline";
 import { SerialPort } from "serialport";
 
-const port = new SerialPort({ path: "COM7", baudRate: 9600, autoOpen: false });
+const port = new SerialPort({ path: "/dev/ttyAMA0", baudRate: 9600, autoOpen: false });
 
 const getUserInput = (rl: readline.Interface) =>
     new Promise((resolve) => {
@@ -34,6 +34,10 @@ port.open((error) => {
     if (error) {
         console.log(error);
     }
+
+    port.on('data', (chunk: Buffer) => {
+        console.log(chunk.toString());
+    });
 
     runner();
 });
